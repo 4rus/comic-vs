@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtual Tour</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    <script src="js/Tour.js"></script>
+  </head>
+  <body>
+    <a-scene id="main-scene">
+      
+      <a-sky id="main-container" color="#A3BB6C"></a-sky>
+    
+
+      <!-- Places Container -->
+      <a-entity id="places-container" tour></a-entity>
+    
+
+      <!-- CAMERA -->
+      <a-camera id="camera" wasd-controls="enabled:false">
+    
+        <!-- App Title -->
+        <a-entity
+        id="app-title"
+        position="0 0.7 -1"
+        text="font:exo2bold; align:center;color:black;width:2.5; 
+        value: Virtual Comic Tour"
+        ></a-entity>
+       
+        <a-entity
+        id="app-subtitle"
+        position="0 0.6 -1"
+        text="font:exo2bold; align:center;color:black;width:1; 
+        value:Get your favourite comics!"
+        ></a-entity>
+
+        <!--Background-->
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
